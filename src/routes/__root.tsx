@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles/app.css?url";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -44,7 +45,9 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <HeadContent />
       </head>
       <body>
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+        </ThemeProvider>
         <Scripts />
       </body>
     </html>
