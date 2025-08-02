@@ -9,7 +9,9 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles/app.css?url";
-import { ThemeProvider } from "@/components/providers/theme-provider";
+import { ThemeProvider } from "next-themes";
+import { NotFound } from "./404";
+import SidebarLayout from "@/components/layout";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -28,6 +30,7 @@ export const Route = createRootRoute({
     links: [{ rel: "stylesheet", href: appCss }],
   }),
   component: RootComponent,
+  notFoundComponent: NotFound,
 });
 
 function RootComponent() {
@@ -45,8 +48,8 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <HeadContent />
       </head>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
+        <ThemeProvider attribute="class" defaultTheme="dark">
+          <SidebarLayout>{children}</SidebarLayout>
         </ThemeProvider>
         <Scripts />
       </body>
