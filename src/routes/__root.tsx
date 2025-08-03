@@ -12,6 +12,7 @@ import appCss from "../styles/app.css?url";
 import { ThemeProvider } from "next-themes";
 import { NotFound } from "./404";
 import SidebarLayout from "@/components/layout";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -62,6 +63,8 @@ function RootComponent() {
   );
 }
 
+const queryClient = new QueryClient();
+
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html suppressHydrationWarning>
@@ -70,7 +73,9 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
       </head>
       <body>
         <ThemeProvider attribute="class" defaultTheme="light">
-          <SidebarLayout>{children}</SidebarLayout>
+          <QueryClientProvider client={queryClient}>
+            <SidebarLayout>{children}</SidebarLayout>
+          </QueryClientProvider>
         </ThemeProvider>
         <Scripts />
       </body>

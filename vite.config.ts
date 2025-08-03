@@ -7,6 +7,13 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   server: {
     port: 3000,
+    proxy: {
+      "/api": {
+        target: "https://marketdata.neueda.com/API",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ""),
+      },
+    },
   },
   plugins: [
     tsConfigPaths(),

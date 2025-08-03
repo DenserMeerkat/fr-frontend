@@ -170,6 +170,16 @@
   --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
 }
 
+@theme inline {
+  --color-positive: var(--positive-color);
+  --color-negative: var(--negative-color);
+}
+
+:root {
+  --positive-color: hsl(142 76% 36%);
+  --negative-color: hsl(346 87% 43%);
+}
+
 body {
   letter-spacing: var(--tracking-normal);
   font-family: var(--font-mono);
