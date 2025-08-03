@@ -27,7 +27,28 @@ export const Route = createRootRoute({
         title: "Four Real?",
       },
     ],
-    links: [{ rel: "stylesheet", href: appCss }],
+    links: [
+      { rel: "stylesheet", href: appCss },
+      {
+        rel: "apple-touch-icon",
+        sizes: "180x180",
+        href: "favicon/apple-touch-icon.png",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: "favicon/favicon-32x32.png",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        href: "favicon/favicon-16x16.png",
+      },
+      { rel: "manifest", href: "favicon/site.webmanifest", color: "#fffff" },
+      { rel: "icon", href: "favicon/favicon.ico" },
+    ],
   }),
   component: RootComponent,
   notFoundComponent: NotFound,
@@ -48,7 +69,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <HeadContent />
       </head>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="dark">
+        <ThemeProvider attribute="class" defaultTheme="light">
           <SidebarLayout>{children}</SidebarLayout>
         </ThemeProvider>
         <Scripts />
