@@ -8,7 +8,7 @@ class ApiClient {
   private isStockApi: boolean;
 
   constructor(baseURL: string, isStockApi = false) {
-    this.baseURL = "/api";
+    this.baseURL = baseURL;
     this.isStockApi = isStockApi;
   }
 
