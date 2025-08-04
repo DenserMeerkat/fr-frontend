@@ -9,6 +9,7 @@ dist
 .output
 .tanstack
 .netlify
+.vercel
 
 # code coverage
 coverage
