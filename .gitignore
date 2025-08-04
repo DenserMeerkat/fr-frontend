@@ -5,6 +5,9 @@ node_modules
 out
 dist
 *.tgz
+.nitro
+.output
+.tanstack
 
 # code coverage
 coverage
