@@ -1,15 +1,27 @@
 import {
+  IconAppWindow,
+  IconBed,
+  IconBellRinging,
+  IconBrandReact,
+  IconBuildingArch,
+  IconBulb,
+  IconCategoryPlus,
+  IconChartHistogram,
+  IconPresentation,
+  IconReportAnalytics,
+  IconSeeding,
+  IconTestPipe,
+  IconUsers,
+} from "@tabler/icons-react";
+import {
   AppWindowIcon,
   BookOpenIcon,
   ServerIcon,
-  BriefcaseBusinessIcon,
-  ListTodoIcon,
-  PanelsTopLeftIcon,
-  Settings2,
+  LandPlotIcon,
 } from "lucide-react";
 
 export const app = {
-  name: "Four Real?",
+  name: "Four Real",
   description: "4 Real stock trading app",
 };
 
@@ -41,28 +53,156 @@ export const repos = [
 
 export const navItems = [
   {
-    title: "Dashboard",
-    url: "/dashboard",
-    icon: PanelsTopLeftIcon,
-    isActive: true,
+    title: "Home",
+    url: "/",
+    icon: IconPresentation,
     items: [],
   },
   {
-    title: "Orders",
-    url: "/orders",
-    icon: ListTodoIcon,
+    title: "Team",
+    url: "/team",
+    icon: IconUsers,
     items: [],
   },
   {
-    title: "Portfolio",
-    url: "/portfolio",
-    icon: BriefcaseBusinessIcon,
+    title: "Intro",
+    url: "/intro",
+    icon: IconBulb,
     items: [],
   },
   {
-    title: "Settings",
-    url: "/settings",
-    icon: Settings2,
+    title: "System",
+    url: "/system",
+    icon: IconBuildingArch,
     items: [],
+  },
+  {
+    title: "Tech",
+    url: "/tech",
+    icon: IconBrandReact,
+    items: [],
+  },
+  {
+    title: "Demo",
+    url: "/demo",
+    icon: IconAppWindow,
+    items: [],
+  },
+  {
+    title: "Test",
+    url: "/test",
+    icon: IconTestPipe,
+    items: [],
+  },
+  {
+    title: "Challenges",
+    url: "/challenges",
+    icon: LandPlotIcon,
+    items: [],
+  },
+  {
+    title: "Future",
+    url: "/future",
+    icon: IconSeeding,
+    items: [],
+  },
+  {
+    title: "Conclusion",
+    url: "/conclusion",
+    icon: IconBed,
+    items: [],
+  },
+];
+
+export const team = [
+  {
+    src: "/images/team/ragulraj.jpg",
+    name: "Ragul Raj M",
+    initials: "RR",
+    universiity: "CEG, Chennai",
+    domain: "Frontend",
+  },
+  {
+    src: "/images/team/srinidhi.jpg",
+    name: "Srinidhi B",
+    initials: "SB",
+    universiity: "VIT, Chennai",
+    domain: "Backend",
+  },
+  {
+    src: "/images/team/tejas.jpg",
+    name: "Tejas V",
+    initials: "TV",
+    universiity: "SSN, Chennai",
+    domain: "Frontend",
+  },
+  {
+    src: "/images/team/vijayalakshmi.jpg",
+    name: "Vijayalakshmi S",
+    initials: "VS",
+    universiity: "CEG, Chennai",
+    domain: "Backend",
+  },
+];
+
+export const techStack = {
+  "Project Management": [
+    { name: "Jira", src: "/images/tech/jira.png" },
+    { name: "Bitbucket", src: "/images/tech/bitbucket.png" },
+  ],
+  Frontend: [
+    { name: "React", src: "/images/tech/react.png" },
+    { name: "Next.js", src: "/images/tech/nextjs.png" },
+    { name: "Tailwind CSS", src: "/images/tech/tailwind.png" },
+  ],
+  Backend: [
+    { name: "Java", src: "/images/tech/java.png" },
+    { name: "Spring", src: "/images/tech/spring.png" },
+    { name: "MySQL", src: "/images/tech/mysql.png" },
+  ],
+  DevOps: [
+    { name: "Vercel", src: "/images/tech/vercel.png" },
+    { name: "Docker", src: "/images/tech/docker.png" },
+    { name: "VS Code", src: "/images/tech/vscode.png" },
+    { name: "IntelliJ", src: "/images/tech/intellij.png" },
+  ],
+};
+
+export const futureEnhancements = [
+  {
+    icon: IconBellRinging,
+    content: "Push Notifications for order processing updates.",
+  },
+  {
+    icon: IconChartHistogram,
+    content: "Better Stock Analytics.",
+  },
+  {
+    icon: IconReportAnalytics,
+    content: "Stock Recommendations & Risk Analysis.",
+  },
+  {
+    icon: IconCategoryPlus,
+    content: "More investment options like Mutual Funds, Bonds.",
+  },
+];
+
+export const challengesAndLearnings = [
+  {
+    challenge: "Bitbucket–Jira integration issues during project setup",
+    learning: "Troubleshoot and configure development tool integrations",
+  },
+  {
+    challenge: "Backend database connection problems",
+    learning: "Set up and maintain reliable database connectivity",
+  },
+  {
+    challenge: "Java naming conventions for service/controller layers",
+    learning: "Enforce consistent naming and separation of concerns in Java",
+  },
+  {
+    challenge: "Incompatible framework and hosting platform",
+    learning:
+      "Adapt to technical limitations and make informed tech stack decisions",
   },
 ];

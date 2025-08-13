@@ -11,10 +11,15 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as R404RouteImport } from './routes/404'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as SettingsIndexRouteImport } from './routes/settings/index'
-import { Route as PortfolioIndexRouteImport } from './routes/portfolio/index'
-import { Route as OrdersIndexRouteImport } from './routes/orders/index'
-import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
+import { Route as TestIndexRouteImport } from './routes/test/index'
+import { Route as TechIndexRouteImport } from './routes/tech/index'
+import { Route as TeamIndexRouteImport } from './routes/team/index'
+import { Route as SystemIndexRouteImport } from './routes/system/index'
+import { Route as IntroIndexRouteImport } from './routes/intro/index'
+import { Route as FutureIndexRouteImport } from './routes/future/index'
+import { Route as DemoIndexRouteImport } from './routes/demo/index'
+import { Route as ConclusionIndexRouteImport } from './routes/conclusion/index'
+import { Route as ChallengesIndexRouteImport } from './routes/challenges/index'
 
 const R404Route = R404RouteImport.update({
   id: '/404',
@@ -26,80 +31,146 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SettingsIndexRoute = SettingsIndexRouteImport.update({
-  id: '/settings/',
-  path: '/settings/',
+const TestIndexRoute = TestIndexRouteImport.update({
+  id: '/test/',
+  path: '/test/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PortfolioIndexRoute = PortfolioIndexRouteImport.update({
-  id: '/portfolio/',
-  path: '/portfolio/',
+const TechIndexRoute = TechIndexRouteImport.update({
+  id: '/tech/',
+  path: '/tech/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const OrdersIndexRoute = OrdersIndexRouteImport.update({
-  id: '/orders/',
-  path: '/orders/',
+const TeamIndexRoute = TeamIndexRouteImport.update({
+  id: '/team/',
+  path: '/team/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DashboardIndexRoute = DashboardIndexRouteImport.update({
-  id: '/dashboard/',
-  path: '/dashboard/',
+const SystemIndexRoute = SystemIndexRouteImport.update({
+  id: '/system/',
+  path: '/system/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IntroIndexRoute = IntroIndexRouteImport.update({
+  id: '/intro/',
+  path: '/intro/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FutureIndexRoute = FutureIndexRouteImport.update({
+  id: '/future/',
+  path: '/future/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemoIndexRoute = DemoIndexRouteImport.update({
+  id: '/demo/',
+  path: '/demo/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConclusionIndexRoute = ConclusionIndexRouteImport.update({
+  id: '/conclusion/',
+  path: '/conclusion/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChallengesIndexRoute = ChallengesIndexRouteImport.update({
+  id: '/challenges/',
+  path: '/challenges/',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/404': typeof R404Route
-  '/dashboard': typeof DashboardIndexRoute
-  '/orders': typeof OrdersIndexRoute
-  '/portfolio': typeof PortfolioIndexRoute
-  '/settings': typeof SettingsIndexRoute
+  '/challenges': typeof ChallengesIndexRoute
+  '/conclusion': typeof ConclusionIndexRoute
+  '/demo': typeof DemoIndexRoute
+  '/future': typeof FutureIndexRoute
+  '/intro': typeof IntroIndexRoute
+  '/system': typeof SystemIndexRoute
+  '/team': typeof TeamIndexRoute
+  '/tech': typeof TechIndexRoute
+  '/test': typeof TestIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/404': typeof R404Route
-  '/dashboard': typeof DashboardIndexRoute
-  '/orders': typeof OrdersIndexRoute
-  '/portfolio': typeof PortfolioIndexRoute
-  '/settings': typeof SettingsIndexRoute
+  '/challenges': typeof ChallengesIndexRoute
+  '/conclusion': typeof ConclusionIndexRoute
+  '/demo': typeof DemoIndexRoute
+  '/future': typeof FutureIndexRoute
+  '/intro': typeof IntroIndexRoute
+  '/system': typeof SystemIndexRoute
+  '/team': typeof TeamIndexRoute
+  '/tech': typeof TechIndexRoute
+  '/test': typeof TestIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/404': typeof R404Route
-  '/dashboard/': typeof DashboardIndexRoute
-  '/orders/': typeof OrdersIndexRoute
-  '/portfolio/': typeof PortfolioIndexRoute
-  '/settings/': typeof SettingsIndexRoute
+  '/challenges/': typeof ChallengesIndexRoute
+  '/conclusion/': typeof ConclusionIndexRoute
+  '/demo/': typeof DemoIndexRoute
+  '/future/': typeof FutureIndexRoute
+  '/intro/': typeof IntroIndexRoute
+  '/system/': typeof SystemIndexRoute
+  '/team/': typeof TeamIndexRoute
+  '/tech/': typeof TechIndexRoute
+  '/test/': typeof TestIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
     | '/404'
-    | '/dashboard'
-    | '/orders'
-    | '/portfolio'
-    | '/settings'
+    | '/challenges'
+    | '/conclusion'
+    | '/demo'
+    | '/future'
+    | '/intro'
+    | '/system'
+    | '/team'
+    | '/tech'
+    | '/test'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/404' | '/dashboard' | '/orders' | '/portfolio' | '/settings'
+  to:
+    | '/'
+    | '/404'
+    | '/challenges'
+    | '/conclusion'
+    | '/demo'
+    | '/future'
+    | '/intro'
+    | '/system'
+    | '/team'
+    | '/tech'
+    | '/test'
   id:
     | '__root__'
     | '/'
     | '/404'
-    | '/dashboard/'
-    | '/orders/'
-    | '/portfolio/'
-    | '/settings/'
+    | '/challenges/'
+    | '/conclusion/'
+    | '/demo/'
+    | '/future/'
+    | '/intro/'
+    | '/system/'
+    | '/team/'
+    | '/tech/'
+    | '/test/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   R404Route: typeof R404Route
-  DashboardIndexRoute: typeof DashboardIndexRoute
-  OrdersIndexRoute: typeof OrdersIndexRoute
-  PortfolioIndexRoute: typeof PortfolioIndexRoute
-  SettingsIndexRoute: typeof SettingsIndexRoute
+  ChallengesIndexRoute: typeof ChallengesIndexRoute
+  ConclusionIndexRoute: typeof ConclusionIndexRoute
+  DemoIndexRoute: typeof DemoIndexRoute
+  FutureIndexRoute: typeof FutureIndexRoute
+  IntroIndexRoute: typeof IntroIndexRoute
+  SystemIndexRoute: typeof SystemIndexRoute
+  TeamIndexRoute: typeof TeamIndexRoute
+  TechIndexRoute: typeof TechIndexRoute
+  TestIndexRoute: typeof TestIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -118,32 +189,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/settings/': {
-      id: '/settings/'
-      path: '/settings'
-      fullPath: '/settings'
-      preLoaderRoute: typeof SettingsIndexRouteImport
+    '/test/': {
+      id: '/test/'
+      path: '/test'
+      fullPath: '/test'
+      preLoaderRoute: typeof TestIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/portfolio/': {
-      id: '/portfolio/'
-      path: '/portfolio'
-      fullPath: '/portfolio'
-      preLoaderRoute: typeof PortfolioIndexRouteImport
+    '/tech/': {
+      id: '/tech/'
+      path: '/tech'
+      fullPath: '/tech'
+      preLoaderRoute: typeof TechIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/orders/': {
-      id: '/orders/'
-      path: '/orders'
-      fullPath: '/orders'
-      preLoaderRoute: typeof OrdersIndexRouteImport
+    '/team/': {
+      id: '/team/'
+      path: '/team'
+      fullPath: '/team'
+      preLoaderRoute: typeof TeamIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/dashboard/': {
-      id: '/dashboard/'
-      path: '/dashboard'
-      fullPath: '/dashboard'
-      preLoaderRoute: typeof DashboardIndexRouteImport
+    '/system/': {
+      id: '/system/'
+      path: '/system'
+      fullPath: '/system'
+      preLoaderRoute: typeof SystemIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/intro/': {
+      id: '/intro/'
+      path: '/intro'
+      fullPath: '/intro'
+      preLoaderRoute: typeof IntroIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/future/': {
+      id: '/future/'
+      path: '/future'
+      fullPath: '/future'
+      preLoaderRoute: typeof FutureIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demo/': {
+      id: '/demo/'
+      path: '/demo'
+      fullPath: '/demo'
+      preLoaderRoute: typeof DemoIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/conclusion/': {
+      id: '/conclusion/'
+      path: '/conclusion'
+      fullPath: '/conclusion'
+      preLoaderRoute: typeof ConclusionIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/challenges/': {
+      id: '/challenges/'
+      path: '/challenges'
+      fullPath: '/challenges'
+      preLoaderRoute: typeof ChallengesIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -152,10 +258,15 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   R404Route: R404Route,
-  DashboardIndexRoute: DashboardIndexRoute,
-  OrdersIndexRoute: OrdersIndexRoute,
-  PortfolioIndexRoute: PortfolioIndexRoute,
-  SettingsIndexRoute: SettingsIndexRoute,
+  ChallengesIndexRoute: ChallengesIndexRoute,
+  ConclusionIndexRoute: ConclusionIndexRoute,
+  DemoIndexRoute: DemoIndexRoute,
+  FutureIndexRoute: FutureIndexRoute,
+  IntroIndexRoute: IntroIndexRoute,
+  SystemIndexRoute: SystemIndexRoute,
+  TeamIndexRoute: TeamIndexRoute,
+  TechIndexRoute: TechIndexRoute,
+  TestIndexRoute: TestIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

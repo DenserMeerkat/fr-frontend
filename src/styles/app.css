@@ -176,8 +176,13 @@
 }
 
 :root {
-  --positive-color: hsl(142 76% 36%);
+  --positive-color: hsl(142, 75%, 29%);
   --negative-color: hsl(346 87% 43%);
+}
+
+.dark {
+  --positive-color: hsl(142 76% 36%);
+  --negative-color: hsl(0, 100%, 60%);
 }
 
 body {
