@@ -69,7 +69,7 @@ function Challenges() {
             </h1>
           </BlurFade>
         </div>
-        <div className="mx-auto grid h-full w-full grid-cols-2 gap-x-8 gap-y-4 pt-8 pr-52 pb-24 pl-12 text-xl font-normal tracking-wide">
+        <div className="mx-auto grid h-full w-full grid-cols-2 gap-x-8 gap-y-4 pt-8 pr-60 pb-24 pl-12 text-xl font-normal tracking-wide">
           {challengesAndLearnings.map((challenge, index) => (
             <React.Fragment key={challenge.challenge}>
               <motion.div
